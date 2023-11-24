@@ -1,0 +1,38 @@
+@use '../../../sass/variables' as *;
+@use '../../../sass/mixin' as *;
+
+.delete_task {
+    @include edit-delete;
+
+    .deleting_task {
+        @include secondary-font;
+        color: black;
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    .deleting_task_description {
+    @include tertiary-font;
+    color: black;
+    padding-top: 70px;
+    text-align: center;
+}
+
+    .confirm_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .negative_button {
+        @include button-no;
+        margin-left: 20px;
+    }
+
+    .afirmative_button {
+        @include button-yes;
+        margin-left: 20px;
+    }
+}
+
