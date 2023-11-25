@@ -3,18 +3,25 @@
 
 .delete_task {
     @include edit-delete;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none !important;
+    }
 
     .deleting_task {
         @include secondary-font;
         color: black;
-        padding-top: 70px;
+        padding-top: 60px;
         text-align: center;
     }
 
     .deleting_task_description {
     @include tertiary-font;
     color: black;
-    padding-top: 70px;
     text-align: center;
 }
 
@@ -22,7 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 70px;
+        margin-bottom: 60px;
     }
 
     .negative_button {

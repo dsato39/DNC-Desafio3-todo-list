@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './style.scss'
 
 const Edit_task = ({data}) => {
@@ -7,10 +8,12 @@ const Edit_task = ({data}) => {
           <p>Deseja editar esse item?</p>
         </div>
         <div className='editing_task_description'>
-          <p>{data.description}</p>
+          <p>Tarefa: {data.title}</p>
+          <p>Descrição: {data.description}</p>
+          <p>Status: {data.completed ? "Feito" : "Pendente"}</p>
         </div>
         <div className='confirm_buttons'>
-          <button className='negative_button'>Não</button>
+          <Link to={"/"}><button className='negative_button'>Não</button></Link>
           <button className='afirmative_button'>Sim</button>
         </div>
     </div>

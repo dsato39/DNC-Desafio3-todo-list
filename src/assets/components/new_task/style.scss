@@ -1,7 +1,7 @@
 @use '../../../sass/variables' as *;
 @use '../../../sass/mixin' as *;
 
-.edit_task {
+.new_task {
     @include edit-delete;
     display: flex;
     flex-direction: column;
@@ -12,17 +12,23 @@
         text-decoration: none !important;
     }
 
-    .editing_task {
+    input {
+        border-radius: 10px;
+        height: 25px;
+        width: 400px;
+    }
+
+    .creating_task {
         @include secondary-font;
         color: black;
         text-align: center;
         padding-top: 60px;
     }
 
-    .editing_task_description {
-    @include tertiary-font;
-    color: black;
-    text-align: center;
+    .creating_task_description {
+        @include tertiary-font;
+        color: black;
+        text-align: center;
     }
 
     .confirm_buttons {
@@ -42,4 +48,3 @@
         margin-left: 20px;
     }
 }
-

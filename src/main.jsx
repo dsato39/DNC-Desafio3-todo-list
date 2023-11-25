@@ -13,9 +13,11 @@ import './global.scss'
 import Tasks from './assets/views/tasks/tasks'
 import Edit from './assets/views/edit/edit'
 import Delete from './assets/views/delete/delete'
+import Add from './assets/views/add/add';
 
 //Import db
 import {tasks_mock} from './mock/bd.mock'
+
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,12 @@ const router = createBrowserRouter([
     path: "/delete/:deleteId",
     element: <Delete data={tasks_mock}/>,
   },
+
+  {
+    path: "/add",
+    element: <Add />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
